@@ -3,7 +3,11 @@
 using namespace std;
 
 int sum_to_n(int num){
-    return 0;
+    int total = 0;
+    while (num >= 1){
+        total += num--;
+    }
+    return total;
 }
 
 TEST_CASE("sum_to_n(int n) returns sum of integers from 1 to n") {
