@@ -3,7 +3,7 @@
 using namespace std;
 
 int find_largest(int x, int y) {
-    return 0;
+    return x < y ? y : x;
 }
 
 TEST_CASE("find_largest returns the greater of two integers") {
