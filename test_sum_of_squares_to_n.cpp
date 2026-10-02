@@ -3,7 +3,12 @@
 using namespace std;
 
 int sum_of_squares_to_n(int x){
-    return 0;
+    int sum = 0;
+    while (x > 0){
+        sum += x * x;
+        x--;
+    }
+    return sum;
 }
 
 TEST_CASE("sum_of_squares_to_n(int n) sums squares from 1 to n") {
