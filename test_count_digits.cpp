@@ -3,7 +3,15 @@
 using namespace std;
 
 int count_digits(int x){
-    return 0;
+    int count = 0;
+    if (x == 0){
+        return 1;
+    }
+    while (x > 0){
+        x /= 10;
+        count++;
+    }
+    return count;
 }
 
 TEST_CASE("count_digits(int n) returns number of decimal digits in n") {
