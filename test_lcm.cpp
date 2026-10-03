@@ -3,7 +3,13 @@
 using namespace std;
 
 int lcm(int x, int y){
-    return 0;
+    int lcm  = x >  y ? x : y;
+    while(true){
+        if (lcm % x == 0 && lcm % y == 0){
+            return lcm;
+        }
+        lcm++;
+    }
 }
 
 TEST_CASE("lcm(int n, int m) returns the LCM of n and m") {
