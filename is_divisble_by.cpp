@@ -3,7 +3,7 @@
 using namespace std;
 
 bool is_divisible_by(int x, int y){
-    return true;
+    return x % y == 0;
 }
 
 TEST_CASE("is_divisible_by(int n, int d) returns whether d divides n") {
