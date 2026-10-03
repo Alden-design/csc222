@@ -3,6 +3,15 @@
 using namespace std;
 
 bool is_prime(int x){
+    if (x <= 1) {
+        return false;
+    }
+    
+    for (int check = 2; check * check <= x; check++) {
+        if (x % check == 0) {
+            return false;
+        }
+    }
     return true;
 }
 
