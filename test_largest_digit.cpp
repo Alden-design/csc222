@@ -3,7 +3,16 @@
 using namespace std;
 
 int largest_digit(int x){
-    return 0;
+    int largest = 0;
+    x = std::abs(x);
+
+    while (x > 0){
+        if (x % 10 > largest){
+            largest = x % 10;
+        }
+        x /= 10;
+    }
+    return largest;
 }
 
 TEST_CASE("largest_digit(int n) returns the largest digit in n") {
