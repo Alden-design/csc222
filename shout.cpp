@@ -4,7 +4,15 @@
 using namespace std;
 
 string shout(string str){
-    return "";
+    for (int i = 0; i < str.length(); i++){
+        if (str[i] == '.'){
+            str[i] = '!';
+        }
+        else if (str[i] >= 97 && str[i] <= 122){
+            str[i] -= 32;
+        }
+    }
+    return str;
 }
 
 TEST_CASE("shout turns an exclaimation into a demand") {
