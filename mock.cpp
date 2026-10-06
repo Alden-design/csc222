@@ -4,7 +4,22 @@
 using namespace std;
 
 string mock(string str){
-    return "";
+    bool lastMocked = false;
+
+    for (int i = 0; i < str.length(); i++){
+        if (str[i] >= 97 && str[i] <= 122){
+            if (!lastMocked) {
+                str[i] -= 32;
+                lastMocked = true;
+            } else{
+                lastMocked = false;
+            }
+        } else if (str[i] >= 65 && str[i] <= 90){
+            str[i] += 32;
+            lastMocked = false;
+        }
+    }
+    return str;
 }
 
 TEST_CASE("mock turns a string into a SpongeBob meme") {
