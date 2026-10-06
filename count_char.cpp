@@ -4,7 +4,13 @@
 using namespace std;
 
 int count_char(string str, char ch){
-    return 0;
+    int count = 0;
+    for (int i = 0; i < str.length(); i++){
+        if (str[i] == ch || str[i] == ch - 32){
+            count++;
+        }
+    }
+    return count;
 }
 
 TEST_CASE("count_char(s, ch) counts number of times ch occurs in s") {
