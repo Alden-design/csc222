@@ -4,7 +4,17 @@
 using namespace std;
 
 int count_words(string str){
-    return 0;
+    if (str == ""){
+        return 0;
+    }
+
+    int count = 1;
+    for (int i = 0; i < str.length(); i++){
+        if (str[i] == ' '){
+            count++;
+        }
+    }
+    return count;
 }
 
 TEST_CASE("count_words counts words") {
