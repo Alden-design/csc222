@@ -1,21 +1,24 @@
 #include <iostream>
 using namespace std;
 
+struct mem {
+    int store[2] = {1, 2};
+    int num = 10;
+};
+
 int main () {
     int unknown[5];
 
     for (int i = 0; i < 5; i++)
         cout << "At element " << i << " there is garbage: " << unknown[i] << "\n";
     
-    int num = 10;
-    int store[2] = {1, 2};
+    mem info;
+
+    cout << info.num << "\n";
     
-    cout << num << "\n";
+    info.store[2] = 100;
 
-    for (int i = 0; i < 4; i++)
-        store[i] = 100;
-
-    cout << num;
+    cout << info.num;
     
     return 0;
 }
