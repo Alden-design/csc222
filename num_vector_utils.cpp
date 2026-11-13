@@ -39,6 +39,12 @@ vector<int> only_evens(const vector<int>& nums) {
 }
 
 vector<int> only_odds(const vector<int>& nums) {
-    return {};
+    vector<int> odds;
+
+    for (int num : nums) {
+        if (num % 2 != 0) odds.push_back(num);
+    }
+
+    return odds;
 }
 
