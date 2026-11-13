@@ -23,6 +23,30 @@ double median(const vector<int>& nums) {
 }
 
 vector<int> mode(const vector<int>& nums) {
-    return {};
+    vector<int> sorted = insertion_sort(nums);
+    vector<int> modes;
+
+    int highest_count = 0;
+
+    for (int i = 0; i < sorted.size(); i++) {
+        int current_count = 1;
+
+        while (i + 1 < sorted.size() && sorted[i] == sorted[i + 1]) {
+            current_count++;
+            i++;
+        }
+
+        if (current_count > highest_count) {
+            highest_count = current_count;
+            modes.clear();
+            modes.push_back(sorted[i]);
+        }
+        else if (current_count == highest_count) {
+            modes.push_back(sorted[i]);
+        }
+    }
+
+    return modes;
+
 }
 
