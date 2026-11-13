@@ -25,3 +25,9 @@ TEST_CASE("Testing num_vector_sum") {
     CHECK(num_vector_sum({-2, -1, 0, -1}) == -4);
 
 }
+
+TEST_CASE("Testing num_vector_product") {
+    vector<int> nums = {1, 3, 7};
+    CHECK(num_vector_product(nums) == 21);
+}
+

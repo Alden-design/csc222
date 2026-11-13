@@ -19,3 +19,8 @@ int num_vector_sum(const vector<int>& nums) {
 
     return sum;
 }
+
+int num_vector_product(const vector<int>&) {
+    return 0;
+}
+
