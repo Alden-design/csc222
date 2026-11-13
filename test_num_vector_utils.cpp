@@ -19,4 +19,9 @@ TEST_CASE("Testing render_num_vector") {
 TEST_CASE("Testing num_vector_sum") {
     vector<int> nums = {1, 3, 7};
     CHECK(num_vector_sum(nums) == 11);
+
+    CHECK(num_vector_sum({}) == 0);
+    CHECK(num_vector_sum({3, 7, 12}) == 22);
+    CHECK(num_vector_sum({-2, -1, 0, -1}) == -4);
+
 }
