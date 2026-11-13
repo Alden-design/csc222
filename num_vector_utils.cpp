@@ -68,3 +68,7 @@ int counts(vector<int> nums, int value) {
     return count;
 }
 
+vector<int> insertion_sort(const vector<int>& nums) {
+    return {};
+}
+

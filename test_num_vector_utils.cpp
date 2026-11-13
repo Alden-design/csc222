@@ -73,3 +73,12 @@ TEST_CASE("Testing count function") {
     CHECK(sevens == 1);
     CHECK(eights == 0);
 }
+
+TEST_CASE("Testing insertion_sort") {
+    CHECK(insertion_sort({5, 2, 4, 1, 3}) == (vector<int>{1, 2, 3, 4, 5}));
+    CHECK(insertion_sort({1, 2, 3, 4}) == (vector<int>{1, 2, 3, 4}));
+    CHECK(insertion_sort({}) == (vector<int>{}));
+    CHECK(insertion_sort({7, 7, 2, 2}) == (vector<int>{2, 2, 7, 7}));
+    CHECK(insertion_sort({-3, 5, -1, 0}) == (vector<int>{-3, -1, 0, 5}));
+}
+
