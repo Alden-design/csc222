@@ -2,7 +2,8 @@
 #include <cstdlib>
 using namespace std;
 
-void shuffleMod(int array[], int size) {
+void shuffleMod(int array[]) {
+    int size = sizeof(array) / sizeof(array[0]);
     for (int i = 0; i < size; i++) {
         int j = rand() % (i + 1);
         int temp = array[i];
@@ -11,8 +12,9 @@ void shuffleMod(int array[], int size) {
     }
 }
 
-int* shufflePure(int array[], int size) {
-    int* copy = new int[size];
+int shufflePure(int array[]) {
+    int size = sizeof(array) / sizeof(array[0]);
+    int copy = new int[size];
     for (int i = 0; i < size; ++i) {
         copy[i] = array[i];
     }
