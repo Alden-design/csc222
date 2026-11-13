@@ -49,6 +49,12 @@ vector<int> only_odds(const vector<int>& nums) {
 }
 
 vector<int> nums_between(const vector<int>& nums, int low, int high) {
-    return {};
+    vector<int> result;
+    
+    for (int num : nums) {
+        if (num >= low && num <= high) result.push_back(num);
+    }
+    
+    return result;
 }
 
