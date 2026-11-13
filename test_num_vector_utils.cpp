@@ -45,3 +45,13 @@ TEST_CASE("Testing only_evens") {
     
 }
 
+TEST_CASE("Testing only_odds") {
+    vector<int> nums = {1, 2, 3, 4, 6, 7, 8, 11, 12, 14, 27, 22};
+    vector<int> odds = only_odds(nums);
+    string expected = "1 3 7 11 27";
+
+    CHECK(render_num_vector(odds) == expected);
+    CHECK(render_num_vector(only_odds({2, 4, 6})) == "");
+    CHECK(render_num_vector(only_odds({-3, -1, 0, 2, 5})) == "-3 -1 5");
+}
+

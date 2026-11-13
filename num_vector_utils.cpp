@@ -38,3 +38,7 @@ vector<int> only_evens(const vector<int>& nums) {
     return evens;
 }
 
+vector<int> only_odds(const vector<int>& nums) {
+    return {};
+}
+
