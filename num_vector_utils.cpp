@@ -59,6 +59,12 @@ vector<int> nums_between(const vector<int>& nums, int low, int high) {
 }
 
 int counts(vector<int> nums, int value) {
-    return 0;
+    int count = 0;
+    
+    for (int num : nums) {
+        if (num == value) count++;
+    }
+    
+    return count;
 }
 
