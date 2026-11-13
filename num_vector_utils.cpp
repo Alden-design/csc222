@@ -20,7 +20,11 @@ int num_vector_sum(const vector<int>& nums) {
     return sum;
 }
 
-int num_vector_product(const vector<int>&) {
-    return 0;
+int num_vector_product(const vector<int>& nums) {
+    int product = 1;
+
+    for (int num : nums) product *= num;
+
+    return product;
 }
 
