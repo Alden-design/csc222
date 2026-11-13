@@ -22,3 +22,7 @@ double median(const vector<int>& nums) {
 
 }
 
+vector<int> mode(const vector<int>& nums) {
+    return {};
+}
+
