@@ -34,3 +34,10 @@ TEST_CASE("Testing num_vector_product") {
     CHECK(num_vector_product({-2, -1, -1}) == -2);
 }
 
+TEST_CASE("Testing only_evens") {
+    vector<int> nums = {1, 2, 3, 4, 6, 7, 8, 11, 12, 14, 27, 22};
+    vector<int> evens = only_evens(nums);
+    string expected = "2 4 6 8 12 14 22";
+    CHECK(render_num_vector(evens) == expected);
+}
+
