@@ -8,3 +8,7 @@ double mean(const vector<int>& nums) {
     return sum / nums.size();
 }
 
+double median(const vector<int>& nums) {
+    return 0.0;
+}
+
