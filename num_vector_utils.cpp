@@ -69,6 +69,20 @@ int counts(vector<int> nums, int value) {
 }
 
 vector<int> insertion_sort(const vector<int>& nums) {
-    return {};
+    vector<int> sorted = nums;
+
+    for (int i = 1; i < sorted.size(); i++) {
+        int current = sorted[i];
+        int j = i - 1;
+
+        while (j >= 0 && sorted[j] > current) {
+            sorted[j + 1] = sorted[j];
+            j--;
+        }
+
+        sorted[j + 1] = current;
+    }
+
+    return sorted;
 }
 
